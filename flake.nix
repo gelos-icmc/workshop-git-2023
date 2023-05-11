@@ -22,7 +22,7 @@
           inherit (manifest) name version;
           src = ./.;
           installPhase = "cp -r dist $out";
-          npmDepsHash = "sha256-w/JaNlWWFFZfl/7Sa4Bv8BbvmChXWgZs8RExwZJ4xm4=";
+          npmDepsHash = "sha256-DzC4in5xK4zitVwOopWPxMf/EGEke1nqGO3GNTzARMo=";
         };
       });
 
