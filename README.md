@@ -1,5 +1,8 @@
 # Workshop git intermediário (2023)
 
+[![built with nix](https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a)](https://nixos.org)
+[![hydra status](https://img.shields.io/endpoint?url=https://hydra.m7.rs/job/workshop-git-2023/main/x86_64-linux.default/shield)](https://hydra.m7.rs/jobset/workshop-git-2023/main#tabs-jobs)
+
 Workshop a ser dado pelo Ryan e Gabriel, em data a ser definida.
 
 Esse repositório contém os slides, montados com
