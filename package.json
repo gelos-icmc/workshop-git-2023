@@ -1,0 +1,30 @@
+{
+  "name": "workshop-git-2023",
+  "pname": "workshop-git-2023",
+  "version": "1.0.0",
+  "description": "Workshop de git intermediário 2023",
+  "homepage": "https://github.com/gelos-icmc/workshop-git-2023",
+  "authors": [
+    "Gabriel Fontes",
+    "Ryan Souza"
+  ],
+  "license": "MIT",
+
+  "scripts": {
+    "build": "webpack build --config .webpack.js --mode production",
+    "serve": "webpack serve --config .webpack.js --mode development"
+  },
+  "dependencies": {
+    "reveal.js": "^4.5"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7",
+    "html-webpack-plugin": "^5.5",
+    "sass": "^1.62",
+    "sass-loader": "^13.2",
+    "style-loader": "^3.3",
+    "webpack": "^5.82",
+    "webpack-cli": "^5.1",
+    "webpack-dev-server": "^4.15"
+  }
+}
