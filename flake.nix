@@ -19,7 +19,7 @@
     rec {
       packages = forEachSystem (system: pkgs: {
         default = pkgs.buildNpmPackage {
-          inherit (manifest) name version;
+          inherit (manifest) pname version;
           src = ./.;
           installPhase = "cp -r dist $out";
           npmDepsHash = "sha256-DzC4in5xK4zitVwOopWPxMf/EGEke1nqGO3GNTzARMo=";
