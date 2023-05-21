@@ -16,6 +16,10 @@ module.exports = {
       test: /\.svg$/,
       type: 'asset/source',
     },
+    {
+      test: /\.md$/,
+      type: 'asset/resource',
+    },
   ]},
   output: {
     path: path.resolve(__dirname, 'dist'),
