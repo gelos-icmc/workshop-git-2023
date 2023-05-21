@@ -22,7 +22,8 @@
           inherit (manifest) pname version;
           src = ./.;
           installPhase = "cp -r dist $out";
-          npmDepsHash = "sha256-DzC4in5xK4zitVwOopWPxMf/EGEke1nqGO3GNTzARMo=";
+          npmDepsHash = "sha256-Rgiqz5Z3NnI3WpmOAKun26VfjxYHLQNnllzAv1Gom6E=";
+          makeCacheWritable = true;
         };
       });
 

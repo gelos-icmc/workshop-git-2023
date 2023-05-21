@@ -14,19 +14,15 @@
     "serve": "webpack serve --config .webpack.js --mode development"
   },
   "dependencies": {
-    "gelos-revealjs": "github:gelos-icmc/gelos-revealjs",
-    "reveal.js": "^4.5"
-  },
-  "devDependencies": {
     "css-loader": "^6.7",
-    "html-webpack-inline-svg-plugin": "^2.3.0",
+    "gelos-revealjs": "github:gelos-icmc/gelos-revealjs",
     "html-webpack-plugin": "^5.5",
-    "marked": "^5.0.2",
+    "marked": "^5.0",
+    "reveal.js": "^4.5",
     "sass": "^1.62",
     "sass-loader": "^13.2",
     "style-loader": "^3.3",
-    "url": "^0.11.0",
-    "webpack": "^5.82",
+    "webpack": "^5.83",
     "webpack-cli": "^5.1",
     "webpack-dev-server": "^4.15"
   }
