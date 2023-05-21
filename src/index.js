@@ -1,8 +1,10 @@
 import Reveal from 'reveal.js'
-import 'reveal.js/dist/reveal.css'
-import 'reveal.js/dist/theme/black.css'
-
 import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.js'
+import 'reveal.js/css/reveal.scss'
+import 'gelos-revealjs/scss/gelos.scss'
+import gelosLogo from 'gelos-revealjs/svg/logo.svg';
+
+document.getElementById("gelos-logo").innerHTML = gelosLogo;
 
 Reveal.initialize({
     plugins: [RevealMarkdown],
