@@ -21,6 +21,9 @@ module.exports = {
       type: 'asset/resource',
     },
   ]},
+  devServer: {
+    allowedHosts: "all",
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
