@@ -40,21 +40,23 @@ GIT != GITHUB
 
 ### Instalando o git
 
-- Windows: https://git-scm.com/download/win
-- Linux: https://git-scm.com/download/linux
-- Mac: https://git-scm.com/download/mac
+- Windows: <https://git-scm.com/download/win>
+- Linux: <https://git-scm.com/download/linux>
+- Mac: <https://git-scm.com/download/mac>
 
 ---
 
 ### Configurações iniciais
 
 Definindo seu nome e email padrão para controle de histórico
+
 ```bash
 git config --global user.name "Seu Nome"
 git config --global user.email "seu email"
 ```
 
 Definindo o editor de texto padrão para escrita de mensagens
+
 ```bash
 git config --global core.editor "code" # vscode
 git config --global core.editor "subl" # sublime
@@ -62,6 +64,7 @@ git config --global core.editor "vim" # vim
 ```
 
 Para verificar as configurações
+
 ```bash
 git config --list
 ```
@@ -70,8 +73,8 @@ git config --list
 
 ### Criando um repositório
 
-
 Comandos para criar uma pasta e inicializar um repositório
+
 ```bash
 mkdir nome-da-pasta
 cd nome-da-pasta
@@ -83,4 +86,3 @@ Para quem está no Windows: botão direito do mouse na pasta criada > Git Bash H
 ---
 
 ### Ciclo de vida dos arquivos
-
