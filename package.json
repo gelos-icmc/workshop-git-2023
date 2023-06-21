@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "css-loader": "^6.7",
+    "copy-webpack-plugin": "^11.0",
     "gelos-revealjs": "github:gelos-icmc/gelos-revealjs",
     "html-webpack-plugin": "^5.5",
     "marked": "^5.0",
