@@ -15,7 +15,7 @@
 - Sistema com a finalidade de gerenciar diferentes versões de um mesmo documento
 - Criado por Linus Torvalds em C de modo a ser distribuído & Open Source
 
-![git vs vcs](assets/resource/aula1/gitVsVCS.png)
+![git vs vcs](aula1/gitVsVCS.png)
 
 ---
 
@@ -24,7 +24,7 @@
 - Serviço de Web compartilhado para projetos que utilizam Git
 - Criado por Tom Preston-Werner em Ruby
 
-![git != github](assets/resource/aula1/git!=Github.png)
+![git != github](aula1/git!=Github.png)
 
 ---
 
@@ -82,7 +82,7 @@ git init
 
 Para quem está no Windows: botão direito do mouse na pasta criada > Git Bash Here > git init
 
-![windows Git Bash Here](assets/resource/aula1/windowsGitBashHere.png)
+![windows Git Bash Here](aula1/windowsGitBashHere.png)
 
 ---
 
@@ -100,7 +100,7 @@ Staged: arquivo está pronto para ser commitado (salvo)
 
 ### Ciclo de vida dos arquivos - 2/2
 
-![Git Life Cycle](assets/resource/aula1/gitLifeCycle.png)
+![Git Life Cycle](aula1/gitLifeCycle.png)
 
 Vamos passar por cada um desses estados hoje
 
@@ -177,4 +177,4 @@ git log # mostra o histórico de commits
 
 ### Git log - 1/2
 
-![git log](assets/resource/aula1/gitLogExemplo1.png)
+![git log](aula1/gitLogExemplo1.png)
