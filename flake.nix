@@ -10,7 +10,7 @@
 
   outputs = { self, nixpkgs }:
     let
-      inherit (nixpkgs.lib) genAttrs getExe importJSON;
+      inherit (nixpkgs.lib) genAttrs getExe importJSON readFile;
       pkgsFor = nixpkgs.legacyPackages;
       systems =  [ "x86_64-linux" "aarch64-linux" ];
       manifest = importJSON ./package.json;
@@ -22,24 +22,26 @@
           inherit (manifest) pname version;
           src = ./.;
           installPhase = "cp -r dist $out";
-          npmDepsHash = "sha256-Q2sJNiaUF9bt7UEXogY9od9kO7W2hqS0SLbGnHtW36w=";
+          npmDepsHash = readFile ./.deps-hash;
           makeCacheWritable = true;
         };
+        serve = pkgs.writeShellScriptBin "serve" ''
+          echo "Serving on http://localhost:8080"
+          ${getExe pkgs.webfs} -F \
+            -r ${packages.${system}.default} \
+            -f index.html -p 8080
+        '';
+        fix-hash = pkgs.writeShellScriptBin "fix-hash" ''
+          ${getExe pkgs.prefetch-npm-deps} package-lock.json > .deps-hash
+        '';
       });
 
-      apps = forEachSystem (system: pkgs: {
+      apps = forEachSystem (system: _: {
         default = {
           type = "app";
-          program = getExe (pkgs.writeShellScriptBin "serve" ''
-            echo "Serving on http://localhost:8080"
-            ${getExe pkgs.webfs} -F \
-              -r ${packages.${system}.default} \
-              -f index.html -p 8080
-          '');
+          program = getExe (packages.${system}.default);
         };
       });
-
-      hydraJobs = packages;
     };
 }
 
