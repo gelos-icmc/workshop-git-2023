@@ -1,7 +1,7 @@
 {
   nixConfig = {
-    extra-substituters = ["https://cache.m7.rs"];
-    extra-trusted-public-keys = ["cache.m7.rs:kszZ/NSwE/TjhOcPPQ16IuUiuRSisdiIwhKZCxguaWg="];
+    extra-substituers = [ "https://gelos-icmc.cachix.org" ];
+    extra-trusted-public-keys = [ "gelos-icmc.cachix.org-1:IQxtwf+SS2LUWWoPgzYQMAYUvsBA+7tdooE42KRcCWk=" ];
   };
 
   inputs = {
