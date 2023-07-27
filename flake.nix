@@ -11,37 +11,40 @@
   outputs = { self, nixpkgs }:
     let
       inherit (nixpkgs.lib) genAttrs getExe importJSON readFile;
-      pkgsFor = nixpkgs.legacyPackages;
-      systems =  [ "x86_64-linux" "aarch64-linux" ];
-      manifest = importJSON ./package.json;
-      forEachSystem = f: genAttrs systems (s: f s pkgsFor.${s});
+      systems = [ "x86_64-linux" "aarch64-linux" ];
+      forEachSystem = f: genAttrs systems (s: f s nixpkgs.legacyPackages.${s});
+      mkApp = package: { type = "app"; program = getExe package; };
     in
     rec {
-      packages = forEachSystem (system: pkgs: {
-        default = pkgs.buildNpmPackage {
-          inherit (manifest) pname version;
+      # Pacotes disponíveis via "nix build", "nix shell", "nix run"...
+      packages = forEachSystem (_: pkgs: rec {
+        # O site em si
+        default = site;
+        site = pkgs.buildNpmPackage {
+          inherit (importJSON ./package.json) pname version;
           src = ./.;
           installPhase = "cp -r dist $out";
           npmDepsHash = readFile ./.deps-hash;
           makeCacheWritable = true;
         };
+        # Servir o site com o webfsd
         serve = pkgs.writeShellScriptBin "serve" ''
           echo "Serving on http://localhost:8080"
-          ${getExe pkgs.webfs} -F \
-            -r ${packages.${system}.default} \
-            -f index.html -p 8080
+          ${getExe pkgs.webfs} -F -r ${site} -f index.html -p 8080
         '';
+        # Rodar prefetch-npm-deps e atualizar o hash da package-lock
         fix-hash = pkgs.writeShellScriptBin "fix-hash" ''
           ${getExe pkgs.prefetch-npm-deps} package-lock.json > .deps-hash
         '';
       });
 
-      apps = forEachSystem (system: _: {
-        default = {
-          type = "app";
-          program = getExe (packages.${system}.default);
-        };
+      # Rodar o serve quando usarmos "nix run"
+      apps = forEachSystem (sys: _: {
+        default = mkApp packages.${sys}.serve;
       });
+
+      # Formatador ao usar "nix fmt"
+      formatter = forEachSystem (_: pkgs: pkgs.nixpkgs-fmt);
     };
 }
 
