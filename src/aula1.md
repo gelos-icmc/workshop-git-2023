@@ -301,6 +301,8 @@ Todos esses comandos podem ser acessados sem internet e caso eles a informação
 <!-- TODO: elaborar questões simples e fáceis para que os alunos respondam de modo a fixar o conteúdo teórico -->
 <!-- Dar enfoque a 3 coisas: Estados, Hash e ciclo de comandos -->
 
+---
+
 ### Desfazendo alterações: Adicionando ao commit - 1/4
 
 A qualquer estágio, você talvez queira desfazer algo. Aqui, vamos mostrar como desfazer alterações em arquivos e commits.
@@ -443,10 +445,14 @@ Na prática você vai usar o `git push` e o `git pull` com mais frequência
 - Faça uma alteração no remoto
 - Puxe as alterações do remoto para o local com o `git pull`
 
+---
+
 ### Dúvidas e testes de conhecimento - Github
 
 <!-- TODO: Criar questões que foquem ainda na questão de como o Hash é afetado -->
 <!-- Mudanças no remote e no local como elas se conversam? -->
+
+---
 
 ### Bônus - Git Tags e Git Alias
 
