@@ -221,6 +221,8 @@ git log # mostra o histórico de commits
 
 ![git log](../static/aula1/gitLogExemplo1.png)
 
+<!-- TODO: Explicar o que é o HEAD e dizer q será melhor explicado na aula de branch -->
+
 Se você quiser ver o histórico de commits de uma forma mais resumida você pode usar o comando `git log --oneline`
 
 ---
@@ -294,10 +296,159 @@ Todos esses comandos podem ser acessados sem internet e caso eles a informação
 
 ---
 
-### Dúvidas e testes de conhecimento
+### Dúvidas e testes de conhecimento - O Básico do Git
 
 <!-- TODO: elaborar questões simples e fáceis para que os alunos respondam de modo a fixar o conteúdo teórico -->
 <!-- Dar enfoque a 3 coisas: Estados, Hash e ciclo de comandos -->
 
-### Github - Repositório Remoto
+### Desfazendo alterações: Adicionando ao commit - 1/4
 
+A qualquer estágio, você talvez queira desfazer algo. Aqui, vamos mostrar como desfazer alterações em arquivos e commits.
+
+Um dos casos mais comuns é desfazer um comando quando você esqueceu de adicionar algo ao commit ou escreveu a mensagem errada.
+
+```bash
+git add arquivo1.txt 
+git commit -m "adicionando arquivo 1"
+git add arquivo2.txt
+git commit --amend -m "adicionando arquivo 1 e 2"
+```
+
+Ao usar `amend`, você pode adicionar arquivos ao commit anterior e alterar a mensagem do commit.
+
+Faça um teste, adicione um arquivo e faça um commit, depois adicione outro arquivo e faça um commit com `--amend`.
+
+---
+
+### Desfazendo alterações: Removendo do Stage - 2/4
+
+Outro caso muito comum é quando você quer desfazer alterações em arquivos que ainda não foram commitados. No caso, estão no staged.
+
+```bash
+git add arquivo1.txt
+git add arquivo2.txt
+git status -s # Aqui você vai ver que os arquivos estão no staged
+git reset arquivo1.txt # remove o arquivo do staged
+git status -s # Aqui você vai ver que o arquivo não está mais no staged
+```
+
+---
+
+### Desfazendo alterações: Apagando commit - 3/4
+
+Você pode usar o comando `git reset` para desfazer alterações em arquivos que já foram commitados, mas não é recomendado.
+
+```bash
+git add arquivo1.txt
+git commit -m "adicionando arquivo 1"
+git add arquivo2.txt
+git commit -m "adicionando arquivo 2"
+git reset HEAD~1 # remove o último commi (o número 1 é a quantidade de commits que você quer remover)
+```
+
+Há dois principais tipos de reset: `soft` e `hard`.
+
+- O `soft` remove o commit, mas mantém as alterações no staged.
+- O `hard` remove o commit e as alterações.
+
+Por padrão, o `reset` é `soft`. Para usar o `hard`, você precisa passar o parâmetro `--hard`. Exemplo: `git reset HEAD~1 --hard`
+
+Tente fazer um teste com o `soft` e o `hard`.
+
+<!-- TODO: Adicionar uma nota de quanto é perigoso usar o hard -->
+
+---
+
+### Desfazendo alterações: modificações de um arquivo  - 4/4
+
+E se você se der conta de que na verdade não queria ter feito modificações a um arquivo? O que você faria? Ctrl+z até o infinito?
+
+Para isso temos o comando `git checkout`
+
+```bash
+git status -s # Aqui você vai ver que o arquivo está no unmodified
+# Vamos modificar o arquivo "arquivo1.txt"
+git status -s # Aqui você vai ver que o arquivo está no modified
+git checkout -- arquivo1.txt # remove as alterações feitas no arquivo
+git status -s # Aqui você vai ver que o arquivo está no unmodified
+```
+
+<!-- TODO: Nota de que esse comando é perigoso e que toda alteração feita vai ser perdida -->
+
+### Dúvidas e testes de conhecimento - Desfazendo alterações
+
+<!-- TODO:Elaborar questões de desfazendo mudanças -->
+<!-- Focar em reset e ammend e como o Hash é importante -->
+
+---
+
+### Github - Trabalhando de forma remota - 1/3
+
+Agora que você já sabe como trabalhar com o git localmente, vamos aprender a trabalhar com o git de forma remota
+
+- `git remote -v`: mostra os repositórios remotos que você tem (A flag `-v` mostra a url do repositório)
+
+Se você clonou um repositório, você já tem um repositório remoto chamado `origin`, este, aponta para o repositório que você clonou
+
+Para adicionar um repositório remoto você pode usar o comando `git remote add <nome-do-repositorio> <url-do-repositorio>`
+
+---
+
+### Github - Trabalhando de forma remota - 2/3
+
+Você pode renomear um repositório remoto usando o comando `git remote rename <nome-do-repositorio> <novo-nome-do-repositorio>`
+
+Você também pode remover um repositório remoto usando o comando `git remote remove <nome-do-repositorio>` ou `git remote rm <nome-do-repositorio>`
+
+Você pode inspecionar um repositório remoto usando o comando `git remote show <nome-do-repositorio>`
+
+```bash
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/gelos-icmc/workshop-git-2023.git
+  Push  URL: https://github.com/gelos-icmc/workshop-git-2023.git
+  HEAD branch: main
+  Remote branch:
+    main tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (local out of date)
+```
+
+---
+
+### Github - Trabalhando de forma remota - 3/3
+
+Agora que temos um repositório remoto, vamos aprender a trabalhar com ele
+
+- `git push <nome-do-repositorio> <nome-da-branch>`: envia as alterações para o repositório remoto
+- `git fetch <nome-do-repositorio> <nome-da-branch>`: pega as alterações do repositório remoto, mas não aplica no repositório local
+- `git pull <nome-do-repositorio> <nome-da-branch>`: pega as alterações do repositório remoto e aplica no repositório local
+
+Na prática você vai usar o `git push` e o `git pull` com mais frequência
+
+---
+
+### Parte final - Criando um repositório/perfil no Github
+
+- Crie uma conta no Github
+- Crie um repositório no Github com o seu `username`
+- Crie uma pasta no seu computador com o nome `workshop-git-2023` e inicialize um repositório git nela
+- Adicione o repositório remoto ao repositório local
+- Crie um arquivo `README.md` e adicione um texto qualquer
+- Adicione o arquivo ao staged e faça um commit
+- Envie as alterações para o repositório remoto
+- Verifique se as alterações foram enviadas
+- Faça uma alteração no remoto
+- Puxe as alterações do remoto para o local com o `git pull`
+
+### Dúvidas e testes de conhecimento - Github
+
+<!-- TODO: Criar questões que foquem ainda na questão de como o Hash é afetado -->
+<!-- Mudanças no remote e no local como elas se conversam? -->
+
+### Bônus - Git Tags e Git Alias
+
+<!-- Referência, página 50 livro Pró-git -->
+<!-- Referência, página 54 livro Pró-git -->
