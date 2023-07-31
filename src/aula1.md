@@ -246,6 +246,8 @@ doc/*.txt
 doc/**/*.pdf
 ```
 
+**DICA:** Você pode encontrar modelos prontos de `.gitignore` em https://github.com/github/gitignore
+
 <!-- TODO: referência página 28 livro Pro-git -->
 
 ---
@@ -318,7 +320,7 @@ Eu já sei qual commit específico eu quero ver as alterações, como eu faço a
 Se você quiser ver todas suas alterações feitas até o momento você pode usar o comando `git diff`
 
 - `git diff`: mostra as alterações feitas em arquivos que ainda não foram adicionados ao staged
-- `git diff --staged`: mostra as alterações feitas em arquivos que estão no staged
+- `git diff --staged` ou `git diff --cached`: mostra as alterações feitas em arquivos que estão no staged
 
 ---
 
