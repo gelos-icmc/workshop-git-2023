@@ -205,9 +205,19 @@ Changes to be committed:
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
-    
+
     modified: README.md
 ```
+
+---
+
+### Algumas Flags importantes para os comandos básicos
+
+- `git add -A`: adiciona todos os arquivos (Não importa se você esta em uma subpasta) ao staged
+- `git status -s`: mostra o status do repositório de uma forma mais resumida
+- `git commit -a -m "mensagem do commit"`: adiciona todos os arquivos ao staged e faz o commit
+
+A seguir vamos ver como visualizar as alterações feitas em um commit
 
 ---
 
@@ -310,7 +320,7 @@ A qualquer estágio, você talvez queira desfazer algo. Aqui, vamos mostrar como
 Um dos casos mais comuns é desfazer um comando quando você esqueceu de adicionar algo ao commit ou escreveu a mensagem errada.
 
 ```bash
-git add arquivo1.txt 
+git add arquivo1.txt
 git commit -m "adicionando arquivo 1"
 git add arquivo2.txt
 git commit --amend -m "adicionando arquivo 1 e 2"
