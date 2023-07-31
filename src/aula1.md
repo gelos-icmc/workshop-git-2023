@@ -100,6 +100,8 @@ git config --global core.editor "subl" # sublime
 git config --global core.editor "vim" # vim
 ```
 
+a flag `--global` define que as configurações serão aplicadas para todos os repositórios criados na sua máquina
+
 Para verificar as configurações
 
 ```bash
@@ -217,8 +219,6 @@ Changes not staged for commit:
 - `git status -s`: mostra o status do repositório de uma forma mais resumida
 - `git commit -a -m "mensagem do commit"`: adiciona todos os arquivos ao staged e faz o commit
 
-A seguir vamos ver como visualizar as alterações feitas em um commit
-
 ---
 
 ### Visualizando alterações
@@ -261,7 +261,7 @@ alguma
 
 ---
 
-### Visualizando alterações com mais detalhes - 1/2
+### Visualizando alterações com mais detalhes - 1/3
 
 Sabemos que podemos usar o git log para ver o histórico de commits, mas e se quisermos ver as alterações que foram feitas em cada commit?
 
@@ -275,11 +275,21 @@ Eu recomendo que vocês usem o comando `git log --oneline --graph --all` para ve
 
 ---
 
-### Visualizando alterações com mais detalhes - 2/2
+### Visualizando alterações com mais detalhes - 2/3
 
 Eu já sei qual commit específico eu quero ver as alterações, como eu faço agora? Vou ter que contar??
 
 - `git show <hash-do-commit>`: mostra as alterações feitas no commit especificado (O hash pode ser abreviado, mas tem que ser único)
+- `git show`: mostra as alterações feitas no último commit
+
+---
+
+### Visualizando alterações com mais detalhes - 3/3
+
+Se você quiser ver todas suas alterações feitas até o momento você pode usar o comando `git diff`
+
+- `git diff`: mostra as alterações feitas em arquivos que ainda não foram adicionados ao staged
+- `git diff --staged`: mostra as alterações feitas em arquivos que estão no staged
 
 ---
 
