@@ -428,6 +428,21 @@ git status -s # Aqui você vai ver que o arquivo está no unmodified
 
 <!-- TODO: Nota de que esse comando é perigoso e que toda alteração feita vai ser perdida -->
 
+---
+
+### Removendo arquivos
+
+Para remover arquivos do repositório você pode usar o comando `git rm`
+
+```bash
+git rm arquivo1.txt # remove o arquivo do repositório (local e staged)
+git rm --cached arquivo1.txt # remove o arquivo do staged (local não é afetado)
+```
+
+Uma outra forma de remover arquivos do repositório é usando a forma tradicional de remover arquivos do seu sistema operacional (logo, somente rm --cached tem certa utilidade aqui)
+
+**NOTA:** Remover um arquivo desta forma não exclui os rastros dele do histórico de commits, se você quiser fazer isso você pode usar o comando `git filter-branch` que será abordado na próxima aula
+
 ### Dúvidas e testes de conhecimento - Desfazendo alterações
 
 <!-- TODO:Elaborar questões de desfazendo mudanças -->
