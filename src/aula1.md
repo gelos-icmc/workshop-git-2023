@@ -217,7 +217,7 @@ Changes not staged for commit:
 
 - `git add -A`: adiciona todos os arquivos (Não importa se você esta em uma subpasta) ao staged
 - `git status -s`: mostra o status do repositório de uma forma mais resumida
-- `git commit -a -m "mensagem do commit"`: adiciona todos os arquivos ao staged e faz o commit
+- `git commit -a -m "mensagem do commit"`: adiciona todos os arquivos (Já trackeados) ao staged e faz o commit
 
 ---
 
