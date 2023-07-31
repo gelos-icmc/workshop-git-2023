@@ -221,6 +221,35 @@ Changes not staged for commit:
 
 ---
 
+### Ignorando arquivos
+
+É possível ignorar arquivos que você não quer que sejam adicionados ao repositório criando um arquivo chamado `.gitignore`
+
+```bash
+touch .gitignore # cria o arquivo .gitignore
+```
+
+Dentro desse arquivo você pode colocar o nome dos arquivos ou pastas que você quer ignorar, ele segue o padrão de expressões regulares usadas no linux
+
+```bash
+# ignorar arquivos com extensão .a
+*.a
+# mas rastrear o arquivo lib.a, mesmo que você esteja ignorando os arquivos .a acima
+!lib.a
+# ignorar o arquivo TODO apenas no diretório atual, mas não em subdir/TODO
+/TODO
+# ignorar todos os arquivos no diretório build/
+build/
+# ignorar doc/notes.txt, mas não doc/server/arch.txt
+doc/*.txt
+# ignorar todos os arquivos .pdf no diretório doc/
+doc/**/*.pdf
+```
+
+<!-- TODO: referência página 28 livro Pro-git -->
+
+---
+
 ### Visualizando alterações
 
 Agora, você fez o seu primeiro commit! vamos aprender a ver o histórico de commits
