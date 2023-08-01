@@ -4,9 +4,52 @@
 
 ### Objetivos da Aula 1
 
-- Entender o Controle de Versão
-- Como lidar com o git e seus comandos
-- Como subir o seu primeiro repositório
+- Entender o GIT como Controle de Versão - Teoria
+- Comandos básicos e usos especificos - Prática
+- Trabalhando com repositórios remotos - Prática
+
+---
+
+### Tabela de conteúdos
+
+- [Aula 1 - Introdução ao Git](#aula-1---introdução-ao-git)
+  - [Objetivos da Aula 1](#objetivos-da-aula-1)
+  - [Tabela de conteúdos](#tabela-de-conteúdos)
+  - [O que é Git?](#o-que-é-git)
+  - [O que é Github?](#o-que-é-github)
+  - [Por que usar Git?](#por-que-usar-git)
+  - [Ciclo de vida dos arquivos: Os Três Estados - 1/2](#ciclo-de-vida-dos-arquivos-os-três-estados---12)
+  - [Ciclo de vida dos arquivos - 2/2](#ciclo-de-vida-dos-arquivos---22)
+  - [Instalando o git](#instalando-o-git)
+  - [Configurações iniciais](#configurações-iniciais)
+  - [Criando um repositório](#criando-um-repositório)
+  - [Comandos básicos](#comandos-básicos)
+  - [Exemplo de uso](#exemplo-de-uso)
+  - [Exemplo de uso - 1/3](#exemplo-de-uso---13)
+  - [Exemplo de uso - 2/3](#exemplo-de-uso---23)
+  - [Exemplo de uso - 3/3](#exemplo-de-uso---33)
+  - [Algumas Flags importantes para os comandos básicos](#algumas-flags-importantes-para-os-comandos-básicos)
+  - [Ignorando arquivos](#ignorando-arquivos)
+  - [Visualizando alterações](#visualizando-alterações)
+  - [Git Tem Integridade: Hash - 1/1](#git-tem-integridade-hash---11)
+  - [Git Tem Integridade: Somente adição - 1/2](#git-tem-integridade-somente-adição---12)
+  - [Visualizando alterações com mais detalhes - 1/3](#visualizando-alterações-com-mais-detalhes---13)
+  - [Visualizando alterações com mais detalhes - 2/3](#visualizando-alterações-com-mais-detalhes---23)
+  - [Visualizando alterações com mais detalhes - 3/3](#visualizando-alterações-com-mais-detalhes---33)
+  - [Pedindo Ajuda](#pedindo-ajuda)
+  - [Dúvidas e testes de conhecimento - O Básico do Git](#dúvidas-e-testes-de-conhecimento---o-básico-do-git)
+  - [Desfazendo alterações: Adicionando ao commit - 1/4](#desfazendo-alterações-adicionando-ao-commit---14)
+  - [Desfazendo alterações: Removendo do Stage - 2/4](#desfazendo-alterações-removendo-do-stage---24)
+  - [Desfazendo alterações: Apagando commit - 3/4](#desfazendo-alterações-apagando-commit---34)
+  - [Desfazendo alterações: modificações de um arquivo  - 4/4](#desfazendo-alterações-modificações-de-um-arquivo----44)
+  - [Removendo arquivos](#removendo-arquivos)
+  - [Dúvidas e testes de conhecimento - Desfazendo alterações](#dúvidas-e-testes-de-conhecimento---desfazendo-alterações)
+  - [Github - Trabalhando de forma remota - 1/3](#github---trabalhando-de-forma-remota---13)
+  - [Github - Trabalhando de forma remota - 2/3](#github---trabalhando-de-forma-remota---23)
+  - [Github - Trabalhando de forma remota - 3/3](#github---trabalhando-de-forma-remota---33)
+  - [Parte final - Criando um repositório/perfil no Github](#parte-final---criando-um-repositórioperfil-no-github)
+  - [Dúvidas e testes de conhecimento - Github](#dúvidas-e-testes-de-conhecimento---github)
+  - [Bônus - Git Tags e Git Alias](#bônus---git-tags-e-git-alias)
 
 ---
 
@@ -46,7 +89,7 @@ tamanho dos dados)
 
 ---
 
-### Ciclo de vida dos arquivos: Os Três Estados - 1/3
+### Ciclo de vida dos arquivos: Os Três Estados - 1/2
 
 <!-- TODO: Deixar uma citação do livro Pro-Git Página 14 -->
 - Esta é a **principal** coisa a lembrar sobre Git se você quiser que o resto do seu processo de aprendizagem ocorra sem problemas
@@ -65,7 +108,7 @@ O fluxo de trabalho básico do Git é algo assim:
 
 ---
 
-### Ciclo de vida dos arquivos - 2/3
+### Ciclo de vida dos arquivos - 2/2
 
 Agora que você entendeu os três principais estados de um repositório Git, vamos entender como cada arquivo se comporta dentro do repositório
 
@@ -277,9 +320,13 @@ Se você quiser ver o histórico de commits de uma forma mais resumida você pod
 
 - O mecanismo que o Git usa para essa verificação é chamado de SHA-1 hash, que é uma sequência de 40 caracteres hexadecimais (0-9 e a-f) calculados com base no conteúdo do arquivo
 
-`24b9da6552252987aa493b52f8696cd6d3b00373`
+```bash
+24b9da6552252987aa493b52f8696cd6d3b00373
+```
 
 Você vai ver esses valores de hash em todo o lugar do Git porque ele os usa com frequência. Na verdade, Git armazena tudo não pelo nome do arquivo, mas pelo valor de hash do seu conteúdo.
+
+---
 
 ### Git Tem Integridade: Somente adição - 1/2
 
@@ -442,6 +489,8 @@ git rm --cached arquivo1.txt # remove o arquivo do staged (local não é afetado
 Uma outra forma de remover arquivos do repositório é usando a forma tradicional de remover arquivos do seu sistema operacional (logo, somente rm --cached tem certa utilidade aqui)
 
 **NOTA:** Remover um arquivo desta forma não exclui os rastros dele do histórico de commits, se você quiser fazer isso você pode usar o comando `git filter-branch` que será abordado na próxima aula
+
+---
 
 ### Dúvidas e testes de conhecimento - Desfazendo alterações
 
