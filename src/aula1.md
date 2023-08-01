@@ -473,6 +473,10 @@ git checkout -- arquivo1.txt # remove as alterações feitas no arquivo
 git status -s # Aqui você vai ver que o arquivo está no unmodified
 ```
 
+O `--` é usado para dizer que o que vem depois dele é um arquivo e não nomes de branchs ou tags (que vamos ver mais tarde)
+
+também é possível usar o comando `git checkout .` que remove as alterações de todos os arquivos modificados no repositório
+
 <!-- TODO: Nota de que esse comando é perigoso e que toda alteração feita vai ser perdida -->
 
 ---
