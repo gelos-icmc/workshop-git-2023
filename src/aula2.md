@@ -1,8 +1,8 @@
-## Aula 2 - Navegação e referências
+# Aula 2 - Navegação e referências
 
 ---
 
-### Objetivos da Aula 2
+## Objetivos da Aula 2
 
 - Entender Braching, Merging e Rebase do GIT
 - Git em Servidores (HTTP, SSH) - Configuração de chaves
@@ -10,7 +10,7 @@
 
 ---
 
-### Tabela de conteúdos
+## Tabela de conteúdos
 
 - [Aula 2 - Navegação e referências](#aula-2---navegação-e-referências)
   - [Objetivos da Aula 2](#objetivos-da-aula-2)
@@ -26,7 +26,7 @@
 
 <!-- TODO: Adicionar revisão de comandos e teoria da ultima aula -->
 
-### O que é uma Branch? - 1/3
+## O que é uma Branch? - 1/3
 
 Antes de explicar o que é uma branch, vamos voltar um pouco e entender o que é um commit
 
@@ -44,7 +44,7 @@ Resumir isso
 
 ---
 
-### O que é uma Branch? - 2/3
+## O que é uma Branch? - 2/3
 
 Se você commitar novamente, o proximo commit terá um ponteiro para o commit anterior
 
@@ -56,7 +56,7 @@ Se você commitar novamente, o proximo commit terá um ponteiro para o commit an
 
 ---
 
-### O que é uma Branch? - 3/3
+## O que é uma Branch? - 3/3
 
 Enfim, chegamos em o que é uma branch
 
@@ -69,7 +69,7 @@ Enfim, chegamos em o que é uma branch
 
 ---
 
-### Trabalhar com Branches - 1/3
+## Trabalhar com Branches - 1/3
 
 Ao criar uma branch, você cria um novo ponteiro para seu commit atual
 
@@ -81,7 +81,7 @@ Ao criar uma branch, você cria um novo ponteiro para seu commit atual
 
 ---
 
-### Trabalhar com Branches - 2/3
+## Trabalhar com Branches - 2/3
 
 Então, como eu mudo de branch?
 
@@ -93,7 +93,7 @@ Suponha então que você troque de branch e crie um novo commit
 
 ---
 
-### Trabalhar com Branches - 3/3
+## Trabalhar com Branches - 3/3
 
 Deste modo, você pode alternar entre branches e criar commits em cada uma delas
 

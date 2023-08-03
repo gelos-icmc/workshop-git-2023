@@ -1,8 +1,8 @@
-## Aula 1 - Introdução ao Git
+# Aula 1 - Introdução ao Git
 
 ---
 
-### Objetivos da Aula 1
+## Objetivos da Aula 1
 
 - Entender o GIT como Controle de Versão - Teoria
 - Comandos básicos e usos especificos - Prática
@@ -10,7 +10,7 @@
 
 ---
 
-### Tabela de conteúdos
+## Tabela de conteúdos
 
 - [Aula 1 - Introdução ao Git](#aula-1---introdução-ao-git)
   - [Objetivos da Aula 1](#objetivos-da-aula-1)
@@ -19,7 +19,7 @@
   - [O que é Github?](#o-que-é-github)
   - [Por que usar Git?](#por-que-usar-git)
   - [Ciclo de vida dos arquivos: Os Três Estados - 1/2](#ciclo-de-vida-dos-arquivos-os-três-estados---12)
-  - [Ciclo de vida dos arquivos - 2/2](#ciclo-de-vida-dos-arquivos---22)
+    - [Ciclo de vida dos arquivos - 2/2](#ciclo-de-vida-dos-arquivos---22)
   - [Instalando o git](#instalando-o-git)
   - [Configurações iniciais](#configurações-iniciais)
   - [Criando um repositório](#criando-um-repositório)
@@ -54,7 +54,7 @@
 ---
 
 <!-- O Básico do Git -->
-### O que é Git?
+## O que é Git?
 
 - Sistema com a finalidade de gerenciar diferentes versões de um mesmo documento
 - O Git é uma das maiores ferramenta Open Source da atualidade, Todas as empreas de tecnologia utilizam Git
@@ -66,7 +66,7 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 
 ---
 
-### O que é Github?
+## O que é Github?
 
 <!-- TODO: Melhorar descrição do github -->
 - Serviço de Web compartilhado para projetos que utilizam Git
@@ -76,7 +76,7 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 
 ---
 
-### Por que usar Git?
+## Por que usar Git?
 
 - Histórico de alterações do seu projeto
 <!-- TODO: Deixar uma citação do livro Pro-Git Página 11 -->
@@ -89,7 +89,7 @@ tamanho dos dados)
 
 ---
 
-### Ciclo de vida dos arquivos: Os Três Estados - 1/2
+## Ciclo de vida dos arquivos: Os Três Estados - 1/2
 
 <!-- TODO: Deixar uma citação do livro Pro-Git Página 14 -->
 - Esta é a **principal** coisa a lembrar sobre Git se você quiser que o resto do seu processo de aprendizagem ocorra sem problemas
@@ -118,7 +118,7 @@ Vamos passar por cada um desses estados hoje
 
 ---
 
-### Instalando o git
+## Instalando o git
 
 - Windows: <https://git-scm.com/download/win>
 - Linux: <https://git-scm.com/download/linux>
@@ -126,7 +126,7 @@ Vamos passar por cada um desses estados hoje
 
 ---
 
-### Configurações iniciais
+## Configurações iniciais
 
 Definindo seu nome e email padrão para controle de histórico
 
@@ -153,7 +153,7 @@ git config --list
 
 ---
 
-### Criando um repositório
+## Criando um repositório
 
 Temos duas formas de criar um repositório, você cria um ou você clona um
 
@@ -177,7 +177,7 @@ Para quem está no Windows: botão direito do mouse na pasta criada > Git Bash H
 
 ---
 
-### Comandos básicos
+## Comandos básicos
 
 Antes de mostrar os comandos vamos defini-los
 
@@ -188,7 +188,7 @@ Antes de mostrar os comandos vamos defini-los
 
 ---
 
-### Exemplo de uso
+## Exemplo de uso
 
 Vamos criar um arquivo html com o nome index.html com o texto `Olá Mundo` e vamos adicionar ele ao nosso repositório
 
@@ -196,7 +196,7 @@ Uma vez com o repositorio criado (git init) e o arquivo criado (index.html) vamo
 
 ---
 
-### Exemplo de uso - 1/3
+## Exemplo de uso - 1/3
 
 código html do arquivo index.html para quem quiser copiar
 
@@ -220,7 +220,7 @@ código html do arquivo index.html para quem quiser copiar
 
 ---
 
-### Exemplo de uso - 2/3
+## Exemplo de uso - 2/3
 
 Executem na máquina de vocês
 
@@ -235,7 +235,7 @@ git status # (agora o arquivo está no unmodified)
 
 ---
 
-### Exemplo de uso - 3/3
+## Exemplo de uso - 3/3
 
 Vocês vão ver alguma coisa parecida com isso ao executar o git status
 
@@ -256,7 +256,7 @@ Changes not staged for commit:
 
 ---
 
-### Algumas Flags importantes para os comandos básicos
+## Algumas Flags importantes para os comandos básicos
 
 - `git add -A`: adiciona todos os arquivos (Não importa se você esta em uma subpasta) ao staged
 - `git status -s`: mostra o status do repositório de uma forma mais resumida
@@ -264,7 +264,7 @@ Changes not staged for commit:
 
 ---
 
-### Ignorando arquivos
+## Ignorando arquivos
 
 É possível ignorar arquivos que você não quer que sejam adicionados ao repositório criando um arquivo chamado `.gitignore`
 
@@ -295,7 +295,7 @@ doc/**/*.pdf
 
 ---
 
-### Visualizando alterações
+## Visualizando alterações
 
 Agora, você fez o seu primeiro commit! vamos aprender a ver o histórico de commits
 
@@ -311,7 +311,7 @@ Se você quiser ver o histórico de commits de uma forma mais resumida você pod
 
 ---
 
-### Git Tem Integridade: Hash - 1/1
+## Git Tem Integridade: Hash - 1/1
 
 <!-- TODO: citação ao livro pro-git página 13 -->
 
@@ -328,7 +328,7 @@ Você vai ver esses valores de hash em todo o lugar do Git porque ele os usa com
 
 ---
 
-### Git Tem Integridade: Somente adição - 1/2
+## Git Tem Integridade: Somente adição - 1/2
 
 O Git só adiciona informações ao repositório, ele nunca altera ou exclui informações
 
@@ -339,7 +339,7 @@ alguma
 
 ---
 
-### Visualizando alterações com mais detalhes - 1/3
+## Visualizando alterações com mais detalhes - 1/3
 
 Sabemos que podemos usar o git log para ver o histórico de commits, mas e se quisermos ver as alterações que foram feitas em cada commit?
 
@@ -353,7 +353,7 @@ Eu recomendo que vocês usem o comando `git log --oneline --graph --all` para ve
 
 ---
 
-### Visualizando alterações com mais detalhes - 2/3
+## Visualizando alterações com mais detalhes - 2/3
 
 Eu já sei qual commit específico eu quero ver as alterações, como eu faço agora? Vou ter que contar??
 
@@ -362,7 +362,7 @@ Eu já sei qual commit específico eu quero ver as alterações, como eu faço a
 
 ---
 
-### Visualizando alterações com mais detalhes - 3/3
+## Visualizando alterações com mais detalhes - 3/3
 
 Se você quiser ver todas suas alterações feitas até o momento você pode usar o comando `git diff`
 
@@ -371,7 +371,7 @@ Se você quiser ver todas suas alterações feitas até o momento você pode usa
 
 ---
 
-### Pedindo Ajuda
+## Pedindo Ajuda
 
 Git possui muitos comandos e muitos deles você vai se esquecer como usar corretamente ou vai querer saber mais sobre eles
 
@@ -394,14 +394,14 @@ Todos esses comandos podem ser acessados sem internet e caso eles a informação
 
 ---
 
-### Dúvidas e testes de conhecimento - O Básico do Git
+## Dúvidas e testes de conhecimento - O Básico do Git
 
 <!-- TODO: elaborar questões simples e fáceis para que os alunos respondam de modo a fixar o conteúdo teórico -->
 <!-- Dar enfoque a 3 coisas: Estados, Hash e ciclo de comandos -->
 
 ---
 
-### Desfazendo alterações: Adicionando ao commit - 1/4
+## Desfazendo alterações: Adicionando ao commit - 1/4
 
 A qualquer estágio, você talvez queira desfazer algo. Aqui, vamos mostrar como desfazer alterações em arquivos e commits.
 
@@ -420,7 +420,7 @@ Faça um teste, adicione um arquivo e faça um commit, depois adicione outro arq
 
 ---
 
-### Desfazendo alterações: Removendo do Stage - 2/4
+## Desfazendo alterações: Removendo do Stage - 2/4
 
 Outro caso muito comum é quando você quer desfazer alterações em arquivos que ainda não foram commitados. No caso, estão no staged.
 
@@ -434,7 +434,7 @@ git status -s # Aqui você vai ver que o arquivo não está mais no staged
 
 ---
 
-### Desfazendo alterações: Apagando commit - 3/4
+## Desfazendo alterações: Apagando commit - 3/4
 
 Você pode usar o comando `git reset` para desfazer alterações em arquivos que já foram commitados, mas não é recomendado.
 
@@ -459,7 +459,7 @@ Tente fazer um teste com o `soft` e o `hard`.
 
 ---
 
-### Desfazendo alterações: modificações de um arquivo  - 4/4
+## Desfazendo alterações: modificações de um arquivo  - 4/4
 
 E se você se der conta de que na verdade não queria ter feito modificações a um arquivo? O que você faria? Ctrl+z até o infinito?
 
@@ -481,7 +481,7 @@ também é possível usar o comando `git checkout .` que remove as alterações 
 
 ---
 
-### Removendo arquivos
+## Removendo arquivos
 
 Para remover arquivos do repositório você pode usar o comando `git rm`
 
@@ -496,14 +496,14 @@ Uma outra forma de remover arquivos do repositório é usando a forma tradiciona
 
 ---
 
-### Dúvidas e testes de conhecimento - Desfazendo alterações
+## Dúvidas e testes de conhecimento - Desfazendo alterações
 
 <!-- TODO:Elaborar questões de desfazendo mudanças -->
 <!-- Focar em reset e ammend e como o Hash é importante -->
 
 ---
 
-### Github - Trabalhando de forma remota - 1/3
+## Github - Trabalhando de forma remota - 1/3
 
 Agora que você já sabe como trabalhar com o git localmente, vamos aprender a trabalhar com o git de forma remota
 
@@ -515,7 +515,7 @@ Para adicionar um repositório remoto você pode usar o comando `git remote add 
 
 ---
 
-### Github - Trabalhando de forma remota - 2/3
+## Github - Trabalhando de forma remota - 2/3
 
 Você pode renomear um repositório remoto usando o comando `git remote rename <nome-do-repositorio> <novo-nome-do-repositorio>`
 
@@ -539,7 +539,7 @@ git remote show origin
 
 ---
 
-### Github - Trabalhando de forma remota - 3/3
+## Github - Trabalhando de forma remota - 3/3
 
 Agora que temos um repositório remoto, vamos aprender a trabalhar com ele
 
@@ -551,7 +551,7 @@ Na prática você vai usar o `git push` e o `git pull` com mais frequência
 
 ---
 
-### Parte final - Criando um repositório/perfil no Github
+## Parte final - Criando um repositório/perfil no Github
 
 - Crie uma conta no Github
 - Crie um repositório no Github com o seu `username`
@@ -566,14 +566,14 @@ Na prática você vai usar o `git push` e o `git pull` com mais frequência
 
 ---
 
-### Dúvidas e testes de conhecimento - Github
+## Dúvidas e testes de conhecimento - Github
 
 <!-- TODO: Criar questões que foquem ainda na questão de como o Hash é afetado -->
 <!-- Mudanças no remote e no local como elas se conversam? -->
 
 ---
 
-### Bônus - Git Tags e Git Alias
+## Bônus - Git Tags e Git Alias
 
 <!-- Referência, página 50 livro Pró-git -->
 <!-- Referência, página 54 livro Pró-git -->
