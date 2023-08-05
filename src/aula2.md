@@ -18,9 +18,9 @@
   - [O que é uma Branch? - 1/3](#o-que-é-uma-branch---13)
   - [O que é uma Branch? - 2/3](#o-que-é-uma-branch---23)
   - [O que é uma Branch? - 3/3](#o-que-é-uma-branch---33)
-  - [Trabalhar com Branches - 1/3](#trabalhar-com-branches---13)
-  - [Trabalhar com Branches - 2/3](#trabalhar-com-branches---23)
-  - [Trabalhar com Branches - 3/3](#trabalhar-com-branches---33)
+  - [Trabalhando com Branches - 1/3](#trabalhando-com-branches---13)
+  - [Trabalhando com Branches - 2/3](#trabalhando-com-branches---23)
+  - [Trabalhando com Branches - 3/3](#trabalhando-com-branches---33)
 
 ---
 
@@ -69,7 +69,7 @@ Enfim, chegamos em o que é uma branch
 
 ---
 
-## Trabalhar com Branches - 1/3
+## Trabalhando com Branches - 1/3
 
 Ao criar uma branch, você cria um novo ponteiro para seu commit atual
 
@@ -81,7 +81,7 @@ Ao criar uma branch, você cria um novo ponteiro para seu commit atual
 
 ---
 
-## Trabalhar com Branches - 2/3
+## Trabalhando com Branches - 2/3
 
 Então, como eu mudo de branch?
 
@@ -93,7 +93,7 @@ Suponha então que você troque de branch e crie um novo commit
 
 ---
 
-## Trabalhar com Branches - 3/3
+## Trabalhando com Branches - 3/3
 
 Deste modo, você pode alternar entre branches e criar commits em cada uma delas
 
