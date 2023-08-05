@@ -21,6 +21,7 @@
   - [Trabalhando com Branches - 1/3](#trabalhando-com-branches---13)
   - [Trabalhando com Branches - 2/3](#trabalhando-com-branches---23)
   - [Trabalhando com Branches - 3/3](#trabalhando-com-branches---33)
+  - [Prática - Branches](#prática---branches)
 
 ---
 
@@ -102,3 +103,28 @@ Deste modo, você pode alternar entre branches e criar commits em cada uma delas
 Aqui chegamos em um ponto crucial do Git, ao ter duas branches, você pode fazer um merge entre elas
 
 ![Branches](/aula2/branches.png)
+
+---
+
+## Prática - Branches
+<!-- NOTE: A prática será ao vivo junto dos alunos -->
+
+Dentro do repositório da aula 1, crie uma branch chamada `aula2` e faça um commit nela
+
+**Pré-requisitos:** Garanta que a sua branch atual tem ao menos um commit e que você está na branch `main`, para isso:
+
+1. Use o comando `git log` para ver os commits (caso não tenha, commite algo)
+2. caso sua branch principal não se chame `main`, use o comando `git branch -M <nome da branch>` para renomear a branch
+
+**Prática:**
+
+- Auxilio: `git branch` para saber qual branch você está
+- Auxilio: `git log --oneline --graph --decorate --all` para ver o grafo de commits
+
+- Use o comando `git branch <nome da branch>` para criar uma branch
+- Use o comando `git switch <nome da branch>` para mudar de branch
+- Em sua nova branch, commite um novo arquivo ou altere um arquivo existente (veja o grafo de commits)
+- Use o comando `git switch main` para voltar para a branch principal
+- Faça um novo commit de um arquivo diferente ou uma modificação diferente (veja o grafo de commits)
+
+---
