@@ -22,6 +22,8 @@
   - [Trabalhando com Branches - 2/3](#trabalhando-com-branches---23)
   - [Trabalhando com Branches - 3/3](#trabalhando-com-branches---33)
   - [Prática - Branches](#prática---branches)
+  - [Stashing - 1/2](#stashing---12)
+  - [Stashing - 2/2](#stashing---22)
 
 ---
 
@@ -128,3 +130,30 @@ Dentro do repositório da aula 1, crie uma branch chamada `aula2` e faça um com
 - Faça um novo commit de um arquivo diferente ou uma modificação diferente (veja o grafo de commits)
 
 ---
+
+## Stashing - 1/2
+
+Há um local temporário onde o Git armazena as modificações que você fez mas não commitou
+
+- `git stash` - Salva as modificações atuais em um local temporário
+
+![Stash](/aula2/gitStash.jpeg)
+
+o git stash é util quando você quer mudar de branch mas não quer commitar suas modificações (por exemplo, quando você está no meio de uma funcionalidade e precisa mudar de branch para corrigir um bug)
+
+---
+
+## Stashing - 2/2
+
+<!-- TODO: Colocar exemplos e criar demonstração de uso -->
+
+- `git stash list` - Lista os stashes
+- `git stash apply` - Aplica o stash mais recente no seu branch atual (não remove o stash)
+- `git stash pop` - Aplica o stash mais recente no seu branch atual (remove o stash)
+- `git stash drop` - Remove o stash mais recente (não aplica o stash)
+- `git stash clear` - Remove todos os stashes
+- `git stash show` - Mostra as modificações do stash mais recente
+
+**NOTA:** Todos os comandos a cima podem receber um argumento para especificar o stash que você quer aplicar/remover/exibir
+Exemplo: `git stash apply stash@{2}`
+
