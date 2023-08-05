@@ -289,7 +289,7 @@ doc/*.txt
 doc/**/*.pdf
 ```
 
-**DICA:** Você pode encontrar modelos prontos de `.gitignore` em https://github.com/github/gitignore
+**DICA:** Você pode encontrar modelos prontos de `.gitignore` em <https://github.com/github/gitignore>
 
 <!-- TODO: referência página 28 livro Pro-git -->
 
