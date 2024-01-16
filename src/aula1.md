@@ -62,7 +62,7 @@
 
 Sua ideia é simples: salvar as alterações de um arquivo em um determinado momento e permitir tirar informações sobre o que foi alterado, quando e por que e quem fez a alteração.
 
-![git vs vcs](images/aula1/gitVsVCS.png)
+![git vs vcs](./images/aula1/gitVsVCS.png)
 
 ---
 
@@ -72,7 +72,7 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 - Serviço de Web compartilhado para projetos que utilizam Git
 - Criado por Tom Preston-Werner em Ruby
 
-![git != github](images/aula1/git!=Github.png)
+![git != github](./images/aula1/git!=Github.png)
 
 ---
 
@@ -98,7 +98,7 @@ tamanho dos dados)
   - **Staged**: Arquivos que estão sendo rastreados pelo Git e estão prontos para serem commitados
   - **Unmodified**: Arquivos que estão sendo rastreados pelo Git e não foram alterados desde o último commit
 
-![Git life cycle 3 state](images/aula1/gitLifeCycle-3states-local.png)
+![Git life cycle 3 state](./images/aula1/gitLifeCycle-3states-local.png)
 
 O fluxo de trabalho básico do Git é algo assim:
 
@@ -112,7 +112,7 @@ O fluxo de trabalho básico do Git é algo assim:
 
 Agora que você entendeu os três principais estados de um repositório Git, vamos entender como cada arquivo se comporta dentro do repositório
 
-![Git Life Cycle](images/aula1/gitLifeCycle.png)
+![Git Life Cycle](./images/aula1/gitLifeCycle.png)
 
 Vamos passar por cada um desses estados hoje
 
@@ -173,7 +173,7 @@ git clone https://github.com/gelos-icmc/workshop-git-2023 # exemplo
 
 Para quem está no Windows: botão direito do mouse na pasta criada > Git Bash Here > git init
 
-![windows Git Bash Here](images/aula1/windowsGitBashHere.png)
+![windows Git Bash Here](./images/aula1/windowsGitBashHere.png)
 
 ---
 
@@ -303,7 +303,7 @@ Agora, você fez o seu primeiro commit! vamos aprender a ver o histórico de com
 git log # mostra o histórico de commits
 ```
 
-![git log](images/aula1/gitLogExemplo1.png)
+![git log](./images/aula1/gitLogExemplo1.png)
 
 <!-- TODO: Explicar o que é o HEAD e dizer q será melhor explicado na aula de branch -->
 

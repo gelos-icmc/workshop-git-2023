@@ -43,7 +43,7 @@ Resumir isso
 - Quando você faz um commit, o Git armazena um objeto de commit no repositório do Git (./git/objects)
 - Cada commit possui metadados e ponteiros para os "blobs" (arquivos) que foram alterados
 
-![Diagrama de um commit](images/aula2/commit.png)
+![Diagrama de um commit](./images/aula2/commit.png)
 
 ---
 
@@ -55,7 +55,7 @@ Se você commitar novamente, o proximo commit terá um ponteiro para o commit an
 - Cada commit vai ter um ponteiro para uma snapshot (conjunto de arquivos e suas respectivas modificações)
 - O Git é um grafo acíclico direcionado
 
-![Diagrama de grafo de um commit](images/aula2/commitGraph.png)
+![Diagrama de grafo de um commit](./images/aula2/commitGraph.png)
 
 ---
 
@@ -68,7 +68,7 @@ Enfim, chegamos em o que é uma branch
 - Todas as vezes que você commita, este ponteiro é atualizado para o commit mais recente
 - Esse ponteiro é chamado de `HEAD`
 
-![Diagrama de branch master](images/aula2/headBranchExample.png)
+![Diagrama de branch master](./images/aula2/headBranchExample.png)
 
 ---
 
@@ -80,7 +80,7 @@ Ao criar uma branch, você cria um novo ponteiro para seu commit atual
 
 **NOTA:** Ao criar uma branch, você não muda de branch, você continua na branch atual
 
-![Exemplo de criação de branch](images/aula2/createBranch.png)
+![Exemplo de criação de branch](./images/aula2/createBranch.png)
 
 ---
 
@@ -92,7 +92,7 @@ Então, como eu mudo de branch?
 
 Suponha então que você troque de branch e crie um novo commit
 
-![Alternando Branch e commitando](images/aula2/switchBranch.png)
+![Alternando Branch e commitando](./images/aula2/switchBranch.png)
 
 ---
 
@@ -104,7 +104,7 @@ Deste modo, você pode alternar entre branches e criar commits em cada uma delas
 
 Aqui chegamos em um ponto crucial do Git, ao ter duas branches, você pode fazer um merge entre elas
 
-![Branches](images/aula2/branches.png)
+![Branches](./images/aula2/branches.png)
 
 ---
 
@@ -137,7 +137,7 @@ Há um local temporário onde o Git armazena as modificações que você fez mas
 
 - `git stash` - Salva as modificações atuais em um local temporário
 
-![Stash](images/aula2/gitStash.jpg)
+![Stash](./images/aula2/gitStash.jpg)
 
 o git stash é util quando você quer mudar de branch mas não quer commitar suas modificações (por exemplo, quando você está no meio de uma funcionalidade e precisa mudar de branch para corrigir um bug)
 

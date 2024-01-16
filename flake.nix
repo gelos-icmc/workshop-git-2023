@@ -17,7 +17,7 @@
           src = ./.;
           buildInputs = [ pkgs.pandoc pkgs.texlive.combined.scheme-small ];
           installPhase = ''
-            install -D *.pdf -t $out
+            install -D out/*.pdf -t $out
           '';
         };
       });

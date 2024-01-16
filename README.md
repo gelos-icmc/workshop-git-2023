@@ -11,7 +11,7 @@ Esse repositório contém os slides, montados com pandoc + beamer.
 Tenha instalado texlive e pandoc. Para cada aula:
 
 ```bash
-pandoc -t beamer aulaX.md -o aulaX.pdf
+pandoc -d pandoc.yml aulaX.md -o aulaX.pdf
 ```
 
 ### Com make

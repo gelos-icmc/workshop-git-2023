@@ -1,12 +1,14 @@
-MDS := $(wildcard *.md)
-PDFS := $(MDS:.md=.pdf)
+SRC_DIR := ./src
+OUT_DIR := ./out
+SRCS := $(wildcard $(SRC_DIR)/*.md)
+OUTS := $(patsubst $(SRC_DIR)/%.md,$(OUT_DIR)/%.pdf,$(SRCS))
 
-%.pdf: %.md
-	pandoc -t beamer $< -o $@
-
-.PHNOY: all clean
-
-all: $(PDFS)
-
+all: $(OUTS)
 clean:
-	rm $(PDFS)
+	rm -r $(OUT_DIR)
+.PHONY: all clean
+
+$(OUT_DIR)/%.pdf: $(SRC_DIR)/%.md $(OUT_DIR)
+	pandoc -d pandoc.yml $< -o $@
+$(OUT_DIR):
+	mkdir -p $@

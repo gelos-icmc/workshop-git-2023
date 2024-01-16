@@ -1,0 +1,2 @@
+from: markdown+rebase_relative_paths
+to: beamer
