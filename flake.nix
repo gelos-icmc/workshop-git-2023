@@ -11,7 +11,15 @@
     in
     {
       packages = eachSystem (pkgs: {
-        default = pkgs.callPackage ./default.nix { rev = self.shortRev or "dirty"; };
+        default = pkgs.stdenvNoCC.mkDerivation {
+          pname = "workshop-git";
+          version = self.shortRev or "dirty";
+          src = ./.;
+          buildInputs = [ pkgs.pandoc pkgs.texlive.combined.scheme-small ];
+          installPhase = ''
+            install -D *.pdf -t $out
+          '';
+        };
       });
       formatter = eachSystem (pkgs: pkgs.nixpkgs-fmt);
     };
