@@ -2,25 +2,33 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     systems.url = "github:nix-systems/default";
+
+    gelos-theme.url = "github:gelos-icmc/beamer-theme";
+    gelos-theme.inputs.nixpkgs.follows = "nixpkgs";
+    gelos-theme.inputs.systems.follows = "systems";
   };
 
-  outputs = { self, systems, nixpkgs }:
-    let
-      eachSystem = f: nixpkgs.lib.genAttrs
-        (import systems) (system: f nixpkgs.legacyPackages.${system});
-    in
-    {
-      packages = eachSystem (pkgs: {
-        default = pkgs.stdenvNoCC.mkDerivation {
-          pname = "workshop-git";
-          version = self.shortRev or "dirty";
-          src = ./.;
-          buildInputs = [ pkgs.pandoc pkgs.texlive.combined.scheme-small ];
-          installPhase = ''
-            install -D out/*.pdf -t $out
-          '';
-        };
-      });
-      formatter = eachSystem (pkgs: pkgs.nixpkgs-fmt);
-    };
+  outputs = {
+    self,
+    systems,
+    nixpkgs,
+    gelos-theme,
+  }: let
+    eachSystem = f:
+      nixpkgs.lib.genAttrs (import systems) (system: f system nixpkgs.legacyPackages.${system});
+  in {
+    packages = eachSystem (system: pkgs: let
+      texlive = gelos-theme.packages.${system}.texlive-env;
+    in {
+      default = pkgs.stdenvNoCC.mkDerivation {
+        pname = "workshop-git";
+        version = self.shortRev or "dirty";
+        src = ./.;
+        buildInputs = [texlive pkgs.pandoc];
+        buildPhase = "pandoc -t beamer workshop.md -o workshop.pdf";
+        installPhase = "install -D *.pdf -t $out";
+      };
+    });
+    formatter = eachSystem (system: pkgs: pkgs.alejandra);
+  };
 }

@@ -1,6 +1,12 @@
-# Aula 1 - Introdução ao Git
-
 ---
+title: Workshop de Git
+subtitle: Indo além do básico
+author: Ryan & Gabriel
+theme: gelos
+themeoptions: ["dark"]
+---
+
+# Aula 1 - Introdução ao Git
 
 ## Objetivos da Aula 1
 
@@ -8,7 +14,6 @@
 - Comandos básicos e usos especificos - Prática
 - Trabalhando com repositórios remotos - Prática
 
----
 
 ## Tabela de conteúdos
 
@@ -51,7 +56,6 @@
   - [Dúvidas e testes de conhecimento - Github](#dúvidas-e-testes-de-conhecimento---github)
   - [Bônus - Git Tags e Git Alias](#bônus---git-tags-e-git-alias)
 
----
 
 <!-- O Básico do Git -->
 ## O que é Git?
@@ -64,7 +68,6 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 
 ![git vs vcs](./images/aula1/gitVsVCS.png)
 
----
 
 ## O que é Github?
 
@@ -74,7 +77,6 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 
 ![git != github](./images/aula1/git!=Github.png)
 
----
 
 ## Por que usar Git?
 
@@ -87,9 +89,10 @@ Sua ideia é simples: salvar as alterações de um arquivo em um determinado mom
 - Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e
 tamanho dos dados)
 
----
 
-## Ciclo de vida dos arquivos: Os Três Estados - 1/2
+## Ciclo de vida dos arquivos
+
+### Os Três Estados
 
 <!-- TODO: Deixar uma citação do livro Pro-Git Página 14 -->
 - Esta é a **principal** coisa a lembrar sobre Git se você quiser que o resto do seu processo de aprendizagem ocorra sem problemas
@@ -106,9 +109,8 @@ O fluxo de trabalho básico do Git é algo assim:
 2. Você prepara os arquivos, adicionando-os ao seu área de preparação. (stage area)
 3. Você faz commit, o que leva os arquivos como eles estão no seu diretório de preparação e os armazena permanentemente no seu diretório Git.
 
----
 
-### Ciclo de vida dos arquivos - 2/2
+## Ciclo de vida dos arquivos - 2/2
 
 Agora que você entendeu os três principais estados de um repositório Git, vamos entender como cada arquivo se comporta dentro do repositório
 
@@ -116,7 +118,6 @@ Agora que você entendeu os três principais estados de um repositório Git, vam
 
 Vamos passar por cada um desses estados hoje
 
----
 
 ## Instalando o git
 
@@ -124,7 +125,6 @@ Vamos passar por cada um desses estados hoje
 - Linux: <https://git-scm.com/download/linux>
 - Mac: <https://git-scm.com/download/mac>
 
----
 
 ## Configurações iniciais
 
@@ -151,7 +151,6 @@ Para verificar as configurações
 git config --list
 ```
 
----
 
 ## Criando um repositório
 
@@ -175,7 +174,6 @@ Para quem está no Windows: botão direito do mouse na pasta criada > Git Bash H
 
 ![windows Git Bash Here](./images/aula1/windowsGitBashHere.png)
 
----
 
 ## Comandos básicos
 
@@ -186,7 +184,6 @@ Antes de mostrar os comandos vamos defini-los
 - `git commit -m "mensagem do commit"`: salva as alterações no repositório
 - `git log`: mostra o histórico de commits
 
----
 
 ## Exemplo de uso
 
@@ -194,7 +191,6 @@ Vamos criar um arquivo html com o nome index.html com o texto `Olá Mundo` e vam
 
 Uma vez com o repositorio criado (git init) e o arquivo criado (index.html) vamos verificar o status do repositório
 
----
 
 ## Exemplo de uso - 1/3
 
@@ -218,7 +214,6 @@ código html do arquivo index.html para quem quiser copiar
 </html>
 ```
 
----
 
 ## Exemplo de uso - 2/3
 
@@ -233,7 +228,6 @@ git commit -m "primeiro commit" # salva as alterações
 git status # (agora o arquivo está no unmodified)
 ```
 
----
 
 ## Exemplo de uso - 3/3
 
@@ -254,7 +248,6 @@ Changes not staged for commit:
     modified: README.md
 ```
 
----
 
 ## Algumas Flags importantes para os comandos básicos
 
@@ -262,7 +255,6 @@ Changes not staged for commit:
 - `git status -s`: mostra o status do repositório de uma forma mais resumida
 - `git commit -a -m "mensagem do commit"`: adiciona todos os arquivos (Já trackeados) ao staged e faz o commit
 
----
 
 ## Ignorando arquivos
 
@@ -293,7 +285,6 @@ doc/**/*.pdf
 
 <!-- TODO: referência página 28 livro Pro-git -->
 
----
 
 ## Visualizando alterações
 
@@ -309,7 +300,6 @@ git log # mostra o histórico de commits
 
 Se você quiser ver o histórico de commits de uma forma mais resumida você pode usar o comando `git log --oneline`
 
----
 
 ## Git Tem Integridade: Hash - 1/1
 
@@ -326,7 +316,6 @@ Se você quiser ver o histórico de commits de uma forma mais resumida você pod
 
 Você vai ver esses valores de hash em todo o lugar do Git porque ele os usa com frequência. Na verdade, Git armazena tudo não pelo nome do arquivo, mas pelo valor de hash do seu conteúdo.
 
----
 
 ## Git Tem Integridade: Somente adição - 1/2
 
@@ -337,7 +326,6 @@ O Git só adiciona informações ao repositório, ele nunca altera ou exclui inf
 alguma
 - Fica mais díficil ainda perder dados se você commitar regularmente e enviar seus dados para outro repositório
 
----
 
 ## Visualizando alterações com mais detalhes - 1/3
 
@@ -351,7 +339,6 @@ Você consegue ver uma "linha histórica" dos commits usando o comando `git log 
 
 Eu recomendo que vocês usem o comando `git log --oneline --graph --all` para ver o histórico de commits de uma forma mais resumida e visual
 
----
 
 ## Visualizando alterações com mais detalhes - 2/3
 
@@ -360,7 +347,6 @@ Eu já sei qual commit específico eu quero ver as alterações, como eu faço a
 - `git show <hash-do-commit>`: mostra as alterações feitas no commit especificado (O hash pode ser abreviado, mas tem que ser único)
 - `git show`: mostra as alterações feitas no último commit
 
----
 
 ## Visualizando alterações com mais detalhes - 3/3
 
@@ -369,7 +355,6 @@ Se você quiser ver todas suas alterações feitas até o momento você pode usa
 - `git diff`: mostra as alterações feitas em arquivos que ainda não foram adicionados ao staged
 - `git diff --staged` ou `git diff --cached`: mostra as alterações feitas em arquivos que estão no staged
 
----
 
 ## Pedindo Ajuda
 
@@ -392,14 +377,12 @@ git help show # vai abrir uma página com a documentação do comando show
 Todos esses comandos podem ser acessados sem internet e caso eles a informação que você precisa não esteja lá você pode acessar a documentação do git em <https://git-scm.com/docs> e pesquisar pelo comando que você precisa
 <!-- O Básico do Git -- FIM -->
 
----
 
 ## Dúvidas e testes de conhecimento - O Básico do Git
 
 <!-- TODO: elaborar questões simples e fáceis para que os alunos respondam de modo a fixar o conteúdo teórico -->
 <!-- Dar enfoque a 3 coisas: Estados, Hash e ciclo de comandos -->
 
----
 
 ## Desfazendo alterações: Adicionando ao commit - 1/4
 
@@ -418,7 +401,6 @@ Ao usar `amend`, você pode adicionar arquivos ao commit anterior e alterar a me
 
 Faça um teste, adicione um arquivo e faça um commit, depois adicione outro arquivo e faça um commit com `--amend`.
 
----
 
 ## Desfazendo alterações: Removendo do Stage - 2/4
 
@@ -432,7 +414,6 @@ git reset arquivo1.txt # remove o arquivo do staged
 git status -s # Aqui você vai ver que o arquivo não está mais no staged
 ```
 
----
 
 ## Desfazendo alterações: Apagando commit - 3/4
 
@@ -457,7 +438,6 @@ Tente fazer um teste com o `soft` e o `hard`.
 
 <!-- TODO: Adicionar uma nota de quanto é perigoso usar o hard -->
 
----
 
 ## Desfazendo alterações: modificações de um arquivo  - 4/4
 
@@ -479,7 +459,6 @@ também é possível usar o comando `git checkout .` que remove as alterações 
 
 <!-- TODO: Nota de que esse comando é perigoso e que toda alteração feita vai ser perdida -->
 
----
 
 ## Removendo arquivos
 
@@ -494,14 +473,12 @@ Uma outra forma de remover arquivos do repositório é usando a forma tradiciona
 
 **NOTA:** Remover um arquivo desta forma não exclui os rastros dele do histórico de commits, se você quiser fazer isso você pode usar o comando `git filter-branch` que será abordado na próxima aula
 
----
 
 ## Dúvidas e testes de conhecimento - Desfazendo alterações
 
 <!-- TODO:Elaborar questões de desfazendo mudanças -->
 <!-- Focar em reset e ammend e como o Hash é importante -->
 
----
 
 ## Github - Trabalhando de forma remota - 1/3
 
@@ -513,7 +490,6 @@ Se você clonou um repositório, você já tem um repositório remoto chamado `o
 
 Para adicionar um repositório remoto você pode usar o comando `git remote add <nome-do-repositorio> <url-do-repositorio>`
 
----
 
 ## Github - Trabalhando de forma remota - 2/3
 
@@ -537,7 +513,6 @@ git remote show origin
     main pushes to main (local out of date)
 ```
 
----
 
 ## Github - Trabalhando de forma remota - 3/3
 
@@ -549,7 +524,6 @@ Agora que temos um repositório remoto, vamos aprender a trabalhar com ele
 
 Na prática você vai usar o `git push` e o `git pull` com mais frequência
 
----
 
 ## Parte final - Criando um repositório/perfil no Github
 
@@ -564,16 +538,164 @@ Na prática você vai usar o `git push` e o `git pull` com mais frequência
 - Faça uma alteração no remoto
 - Puxe as alterações do remoto para o local com o `git pull`
 
----
 
 ## Dúvidas e testes de conhecimento - Github
 
 <!-- TODO: Criar questões que foquem ainda na questão de como o Hash é afetado -->
 <!-- Mudanças no remote e no local como elas se conversam? -->
 
----
 
 ## Bônus - Git Tags e Git Alias
 
 <!-- Referência, página 50 livro Pró-git -->
 <!-- Referência, página 54 livro Pró-git -->
+
+# Aula 2 - Navegação e referências
+
+
+## Objetivos da Aula 2
+
+- Entender Braching, Merging e Rebase do GIT
+- Git em Servidores (HTTP, SSH) - Configuração de chaves
+- Trabalho distrubuído com GIT
+
+
+## Tabela de conteúdos
+
+- [Aula 2 - Navegação e referências](#aula-2---navegação-e-referências)
+  - [Objetivos da Aula 2](#objetivos-da-aula-2)
+  - [Tabela de conteúdos](#tabela-de-conteúdos)
+  - [O que é uma Branch? - 1/3](#o-que-é-uma-branch---13)
+  - [O que é uma Branch? - 2/3](#o-que-é-uma-branch---23)
+  - [O que é uma Branch? - 3/3](#o-que-é-uma-branch---33)
+  - [Trabalhando com Branches - 1/3](#trabalhando-com-branches---13)
+  - [Trabalhando com Branches - 2/3](#trabalhando-com-branches---23)
+  - [Trabalhando com Branches - 3/3](#trabalhando-com-branches---33)
+  - [Prática - Branches](#prática---branches)
+  - [Stashing - 1/2](#stashing---12)
+  - [Stashing - 2/2](#stashing---22)
+
+
+<!-- TODO: Adicionar revisão de comandos e teoria da ultima aula -->
+
+## O que é uma Branch? - 1/3
+
+Antes de explicar o que é uma branch, vamos voltar um pouco e entender o que é um commit
+
+<!-- Quando você faz um commit executando git commit, o Git verifica cada subdiretório (neste caso,
+apenas o diretório raiz do projeto) e armazena esses objetos no repositório do Git. O Git então cria
+um objeto de commit que possui os metadados e um ponteiro para a raiz do projeto para que ele
+possa recriar aquele snapshots quando necessário.
+Resumir isso
+ -->
+
+- Quando você faz um commit, o Git armazena um objeto de commit no repositório do Git (./git/objects)
+- Cada commit possui metadados e ponteiros para os "blobs" (arquivos) que foram alterados
+
+![Diagrama de um commit](./images/aula2/commit.png)
+
+
+## O que é uma Branch? - 2/3
+
+Se você commitar novamente, o proximo commit terá um ponteiro para o commit anterior
+
+<!-- REVIEW: A definição de snapshot esta certa? -->
+- Cada commit vai ter um ponteiro para uma snapshot (conjunto de arquivos e suas respectivas modificações)
+- O Git é um grafo acíclico direcionado
+
+![Diagrama de grafo de um commit](./images/aula2/commitGraph.png)
+
+
+## O que é uma Branch? - 3/3
+
+Enfim, chegamos em o que é uma branch
+
+- Uma branch é um ponteiro para um commit
+- O nome padrão do branch principal é `master` (recomendado mudar para `main`)
+- Todas as vezes que você commita, este ponteiro é atualizado para o commit mais recente
+- Esse ponteiro é chamado de `HEAD`
+
+![Diagrama de branch master](./images/aula2/headBranchExample.png)
+
+
+## Trabalhando com Branches - 1/3
+
+Ao criar uma branch, você cria um novo ponteiro para seu commit atual
+
+- Você pode criar uma branch com o comando `git branch <nome da branch>`
+
+**NOTA:** Ao criar uma branch, você não muda de branch, você continua na branch atual
+
+![Exemplo de criação de branch](./images/aula2/createBranch.png)
+
+
+## Trabalhando com Branches - 2/3
+
+Então, como eu mudo de branch?
+
+- Você pode mudar de branch com o comando `git switch <nome da branch>` ou `git checkout <nome da branch>`
+
+Suponha então que você troque de branch e crie um novo commit
+
+![Alternando Branch e commitando](./images/aula2/switchBranch.png)
+
+
+## Trabalhando com Branches - 3/3
+
+Deste modo, você pode alternar entre branches e criar commits em cada uma delas
+
+- Cada branch é independente uma da outra
+
+Aqui chegamos em um ponto crucial do Git, ao ter duas branches, você pode fazer um merge entre elas
+
+![Branches](./images/aula2/branches.png)
+
+
+## Prática - Branches
+<!-- NOTE: A prática será ao vivo junto dos alunos -->
+
+Dentro do repositório da aula 1, crie uma branch chamada `aula2` e faça um commit nela
+
+**Pré-requisitos:** Garanta que a sua branch atual tem ao menos um commit e que você está na branch `main`, para isso:
+
+1. Use o comando `git log` para ver os commits (caso não tenha, commite algo)
+2. caso sua branch principal não se chame `main`, use o comando `git branch -M <nome da branch>` para renomear a branch
+
+**Prática:**
+
+- Auxilio: `git branch` para saber qual branch você está
+- Auxilio: `git log --oneline --graph --decorate --all` para ver o grafo de commits
+
+- Use o comando `git branch <nome da branch>` para criar uma branch
+- Use o comando `git switch <nome da branch>` para mudar de branch
+- Em sua nova branch, commite um novo arquivo ou altere um arquivo existente (veja o grafo de commits)
+- Use o comando `git switch main` para voltar para a branch principal
+- Faça um novo commit de um arquivo diferente ou uma modificação diferente (veja o grafo de commits)
+
+
+## Stashing - 1/2
+
+Há um local temporário onde o Git armazena as modificações que você fez mas não commitou
+
+- `git stash` - Salva as modificações atuais em um local temporário
+
+![Stash](./images/aula2/gitStash.jpg)
+
+o git stash é util quando você quer mudar de branch mas não quer commitar suas modificações (por exemplo, quando você está no meio de uma funcionalidade e precisa mudar de branch para corrigir um bug)
+
+
+## Stashing - 2/2
+
+<!-- TODO: Colocar exemplos e criar demonstração de uso -->
+
+- `git stash list` - Lista os stashes
+- `git stash apply` - Aplica o stash mais recente no seu branch atual (não remove o stash)
+- `git stash pop` - Aplica o stash mais recente no seu branch atual (remove o stash)
+- `git stash drop` - Remove o stash mais recente (não aplica o stash)
+- `git stash clear` - Remove todos os stashes
+- `git stash show` - Mostra as modificações do stash mais recente
+
+**NOTA:** Todos os comandos a cima podem receber um argumento para especificar o stash que você quer aplicar/remover/exibir
+Exemplo: `git stash apply stash@{2}`
+
+# Aula 3 - Workflow

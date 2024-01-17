@@ -1,5 +1,28 @@
 {
   "nodes": {
+    "gelos-theme": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705499836,
+        "narHash": "sha256-BYZhXsQnWAXg0rUGs1R+Xvp2wHe/VYfflZamxHEHYyE=",
+        "ref": "refs/heads/main",
+        "rev": "bcb81c476202f516abea4fbc83cbe8190cd355cb",
+        "revCount": 4,
+        "type": "git",
+        "url": "file:///home/misterio/Documents/Dev/Usp/GELOS/beamer-theme"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/misterio/Documents/Dev/Usp/GELOS/beamer-theme"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1705331948,
@@ -18,6 +41,7 @@
     },
     "root": {
       "inputs": {
+        "gelos-theme": "gelos-theme",
         "nixpkgs": "nixpkgs",
         "systems": "systems"
       }
