@@ -6,22 +6,30 @@ Esse repositório contém os slides, montados com pandoc + beamer.
 
 ## Build
 
-### Diretamente
-
-Tenha instalado texlive e pandoc. Para cada aula:
-
-```bash
-pandoc -d pandoc.yml aulaX.md -o aulaX.pdf
-```
-
-### Com make
-
-```
-make all
-```
-
 ### Com nix
 
-```
+```bash
 nix build
+```
+
+### Manualmente
+
+Você precisa dos pacotes básicos do tex (e.g. pelo texlive), pandoc. e do [tema
+do gelos](https://github.com/gelos-icmc/beamer-theme).
+
+Uma forma simples é usando a nix shell:
+```bash
+nix develop -c $SHELL
+```
+
+Ou instale texlive e pandoc, e baixe o tema do gelos no seu diretório texmf:
+```bash
+mkdir -p ~/texmf/tex/latex
+git clone https://github.com/gelos-icmc/beamer-theme ~/texmf/tex/latex/gelosbeamer
+```
+
+Com isso certo, basta usar o pandoc:
+
+```bash
+pandoc workshop.md -o workshop.pdf
 ```
