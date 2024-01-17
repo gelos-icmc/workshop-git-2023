@@ -31,5 +31,5 @@ git clone https://github.com/gelos-icmc/beamer-theme ~/texmf/tex/latex/gelosbeam
 Com isso certo, basta usar o pandoc:
 
 ```bash
-pandoc workshop.md -o workshop.pdf
+pandoc -t beamer workshop.md -o workshop.pdf
 ```
